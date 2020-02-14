@@ -34,20 +34,43 @@ const CuisinesData = [
 		numOfRecipes: 6927
 	}
 ];
-
+const numOfRecipesByCuisine = CuisinesData.map(function(data) {
+	return data.numOfRecipes;
+});
+console.log(numOfRecipesByCuisine);
 class ByCuisine extends Component {
 	render() {
 		return (
-			<div className="byCuisinesWrap">
-				<h3>Browse By Cuisines</h3>
-				<ul className="imgTiles">
-					{CuisinesData.map((data) => (
-						<li className="allCuisineImages" id={data.type} key={data.type}>
-							{data.type}
-							<p>{data.numOfRecipes}</p>
-						</li>
-					))}
-				</ul>
+			<div>
+				<div className="byCuisinesWrap">
+					<h3>Browse By Cuisines</h3>
+					<ul className="imgTiles">
+						{CuisinesData.map((data) => (
+							<li className="allCuisineImages" id={data.type} key={data.type}>
+								{data.type}
+								<p>{data.numOfRecipes} Recipes</p>
+							</li>
+						))}
+					</ul>
+				</div>
+				<div className="counter">
+					<div>
+						<p>{numOfRecipesByCuisine.reduce((prevNum, nextNum) => prevNum + nextNum)}</p>
+						<span>Recipes Available</span>
+					</div>
+					<div>
+						<p>509210</p>
+						<span>Active Users</span>
+					</div>
+					<div>
+						<p>983728</p>
+						<span>Reviews</span>
+					</div>
+					<div>
+						<p>33920</p>
+						<span>Photos and Videos</span>
+					</div>
+				</div>
 			</div>
 		);
 	}

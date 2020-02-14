@@ -6,11 +6,6 @@ body {
 	background-color: whitesmoke;
 }
 
-/* .photoFill {
-	background-image: url(../Components/Body/image4.png);
-	background-repeat: no-repeat;
-	object-fit: fill;
-} */
 .headerImg {
 	background-image: url(../imageBack.jpg);
 	object-fit: scale-down;
@@ -84,33 +79,34 @@ nav.show {
 	position: relative;
 }
 
-.slide {
+/* .slide {
 	background-size: cover;
-	background-position: center;
+	background-position: contain;
 	background-repeat: no-repeat;
-}
+} */
 
 #slide1 {
 	background-image: url(../Components/Body/image1.jpg);
-	object-fit: fill;
+	object-fit: cover;
+	height: 200px;
 }
 
 #slide2 {
 	background-image: url(../Components/Body/image2.jpg);
-	background-size: contain;
+	background-size: cover;
+	height: 200px;
 }
 
 #slide3 {
 	background-image: url(../Components/Body/images3.jpg);
 	background-size: cover;
+	height: 200px;
 }
 
 .slide-content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	padding-top: 25px;
+	position: relative;
+	vertical-align: middle;
 	padding-left: 100px;
 	padding-right: 100px;
 	text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
@@ -186,7 +182,7 @@ h3 {
 .imgTiles {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 125%);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	padding: 0;
@@ -204,36 +200,86 @@ h3 {
 	width: auto;
 	height: auto;
 	list-style: none;
+	color: black;
+	font-size: 1.3em;
+	text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+}
+
+.allCuisineImages p {
+	font-size: 75%;
 }
 
 #French {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgFrance.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #Indian {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgIndia.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #Japanese {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgJapan.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #Marrocan {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgMarroco.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #Mexican {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgMexico.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #Portuguese {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgPorto.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #South_African {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgRSA.jpg);
+	background-size: cover;
+	text-align: center;
 }
 
 #Spanish {
 	background-image: url(../Components/Body/ByCuisine_Images/ImgSpain.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+.counter {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 15px;
+	grid-row-gap: 0px;
+	text-align: center;
+	background-color: whitesmoke;
+	padding-top: 230px;
+}
+
+.counter p {
+	font-weight: bold;
+	font-size: 1.17em;
+}
+
+.counter span {
+	color: darkslategrey;
+	font-size: 0.9em;
+}
+
+footer {
+	background-color: wheat;
+	text-align: right;
+	color: grey;
 }

@@ -17,7 +17,7 @@ class Body extends Component {
 					ius, vim eius sonet quodsi ut. An has tale erant officiis, ex brute iudicabit disputando mel, ius
 					malorum perpetua ut. Ius consul laoreet adolescens et, qui an cibo albucius suscipit.
 				</p>
-				{/* <img src={photoFill} alt="fill" className="photoFill" /> */}
+
 				<Slider />
 				<ByCuisine />
 			</div>
